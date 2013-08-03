@@ -1,0 +1,18 @@
+{
+    "name": "[Insert Quiz Name]",
+    "description": "[Insert a short description that will go at the top of the page]",
+    "questions": [
+        {
+            "text": "This is the text of the question. You can use HTML. Images should be placed in /static.",
+            "options": [
+                ["A list of as many option strings as you want. Again, you can use HTML.", true],
+                ["Each option is paired with a boolean true/false that says whether it's correct", true],
+                ["Any number of answers can be correct/incorrect. You could even make them all incorrect, if you're evil!", false],
+                ["The options will be randomized", false],
+                ["You can
+                break strings if
+                they get too long", true]
+            ]
+        }
+    ]
+}

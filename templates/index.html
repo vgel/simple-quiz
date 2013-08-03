@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Quiz Website - All Quizzes {% endblock %}
+{% block body %}
+    <div id='content'>
+        <span id='title'>All Quizzes</span>
+        <ul>
+            {% for id, name in quiz_names %}
+                <li><a href="{{url_for('quiz', id=id)}}">{{name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

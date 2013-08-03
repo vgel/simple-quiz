@@ -1,0 +1,18 @@
+{% extends "quiz_base.html" %}
+{% block page_title %}{{quiz['name']}}{% endblock %}
+{% block questions %}
+    <form method="post" action="/check_quiz/{{id}}">
+        <input type="hidden" name="ord" value="{{quiz_ordering}}" />
+
+        {% for question in quiz['questions'] %}
+            {% set outer_loop = loop %}
+            <p>
+                <h4>{{question['text']|safe}}</h4>
+                {% for answer in question['options'] %}
+                    <p><label><input type="radio" name="{{outer_loop.index0}}" value="{{loop.index0}}" /> {{answer[0]|safe}}</label></p>
+                {% endfor %}
+            </p>
+        {% endfor %}
+        <input type="submit" value="Submit Your Quiz">
+    </form>
+{% endblock %}

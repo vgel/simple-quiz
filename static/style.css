@@ -1,0 +1,18 @@
+#content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #97A4B3;
+    padding: 15px;
+    font-family: helvetica, arial;
+}
+
+#title {
+    display: block;
+    padding: 5px;
+    background-color: #2A4360;
+    color: #737F8E;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}

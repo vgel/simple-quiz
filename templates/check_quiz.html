@@ -1,0 +1,36 @@
+{% extends "quiz_base.html" %}
+{% block title %} {{quiz['name']}} {% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .question-correct:after {
+            content: "✓";
+            font-size: 30px;
+            color: green;
+            padding-left: 10px;
+        }
+
+        .question-incorrect:after {
+            content: "✗";
+            font-size: 30px;
+            color: red;
+            padding-left: 10px;
+        }
+    </style>
+{% endblock %}
+{% block page_title %}{{quiz['name']}} - Checking ({{correct}} / {{total}}){% endblock %}
+{% block questions %}
+    {% for question, choice in question_answer %}
+        <div>
+            <h4 {% if choice[1] %} class="question-correct" {% else %} class="question-incorrect" {% endif %}>{{question['text']|safe}}</h4>
+            {% for answer in question['options'] %}
+                <p {% if answer[1] %} class="question-correct" {% elif not answer[1] %} class="question-incorrect" {% endif %}>
+                    {{answer[0]|safe}} {% if answer == choice %} - <strong> Chosen </strong> {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+        {% if loop.revindex0 > 0 %}
+            <hr />
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,50 @@
+{
+    "name": "Reddiquette Quiz",
+    "description": "How well versed are you in the rules of Reddit? Quiz yoself before you run afoul!",
+    "questions": [
+        {
+            "text": "Reddiquette is the ettiquette of which site?",
+            "options": [
+                ["4chan", false],
+                ["Reddit", true],
+                ["9gag", false],
+                ["iFunny", false]
+            ]
+        },
+        {
+            "text": "Reddiquette suggests that you should",
+            "options": [
+                ["Dox your enemies in /r/politics arguments", false],
+                ["Spam your own blog for the sweet, sweet money", false],
+                ["Look for original content", true],
+                ["Create a hilarious and quirky name like I_DIDDLE_CATS to whore karma", false]
+            ]
+        },
+        {
+            "text": "You should...",
+            "options": [
+                ["Ignore the Reddiquette", false],
+                ["Not ignore the Reddiquette", true]
+            ]
+        },
+        {
+            "text": "Do...",
+            "options": [
+                ["Use the word BREAKING in titles", false],
+                ["Write titles in ALL CAPS", false],
+                ["Use link shorteners", false],
+                ["Linkjack stories to blogspam", false],
+                ["Be a pretty cool guy", true],
+                ["Be a VERY cool guy", true],
+                ["Complain about reposts", false]
+            ]
+        },
+        {
+            "text": "Reddit suggests that you should...",
+            "options": [
+                ["Do illegal things on the site", false],
+                ["Don't do illegal things", true]
+            ]
+        }
+    ]
+}

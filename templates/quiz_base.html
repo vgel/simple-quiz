@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} {{quiz['name']}} {% endblock %}
+
+{% block body %}
+    <div id='content'>
+        <span id='title'>{% block page_title %} {% endblock %}</span>
+        <p>{{quiz['description']|safe}}</p>
+        {% block questions %} {% endblock %}
+    </div>
+{% endblock %}
